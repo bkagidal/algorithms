@@ -9,7 +9,7 @@ public class HeapDemo {
 				Scanner scan = new Scanner(System.in);
 				
 				while(true){
-					System.out.println("\n");
+					//System.out.println("\n");
 					System.out.println("1.Display");
 					System.out.println("2.Insert");
 					System.out.println("3.Delete");
@@ -26,6 +26,7 @@ public class HeapDemo {
 						case 1:
 									System.out.println("\n");
 									heap.display();
+									System.out.println("\n");
 									break;
 						case 2:
 								    System.out.print("\nEnter Element To Insert :");
@@ -35,6 +36,7 @@ public class HeapDemo {
 						case 3:
 									int elem1 = heap.delete();
 									System.out.println("\nElement "+elem1+"  Deleted");
+									System.out.println("\n");
 									break;
 						
 						default:
