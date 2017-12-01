@@ -22,13 +22,13 @@ public class BinaryTree{
 			return;
 		
 		display(p.rchild, level+1);
-		System.out.println("");
+		System.out.println(" ");
 		
 		for(int i=0;i<level;i++)
-			System.out.print("   ");
+			System.out.print("  ");
 		
-		System.out.println(p.info);
-		
+		System.out.print(p.info);
+		//System.out.print(" ");
 		display(p.lchild, level+1);
 	}
 	
