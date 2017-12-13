@@ -208,7 +208,7 @@ public class SingleLinkedList {
 		if (start == null) {
 			System.out.println("List is Empty");
 			return;
-		} else if (p.link == null) {
+		} else if (p.link == null) { /* Only One element in list */ 
 			start = null;
 			p = null;
 			return;
