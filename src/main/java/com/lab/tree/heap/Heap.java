@@ -70,14 +70,19 @@ public class Heap {
 				a[i]=a[rchild];
 				i = rchild;
 			}
-			
+			lchild = 2*i;
+			rchild = lchild+1;
+		}
+		
 			if(lchild == n && a[lchild]<k){
 				a[i]=a[lchild];
 				i = lchild;
 			}
 			
 			a[i]=k;
-		}
+		
+		
+		
 	}
 
 		public void display(){
