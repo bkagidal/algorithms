@@ -281,13 +281,13 @@ public class DoubleLinkedList {
 		
 		if(p == null)
 			System.out.println("Node Not present");
-		else if(p.next == null){
+		else if(p.next == null){ // last node
 			p.prev.next = p.next;
 			//p.next.prev = p.prev;
-		}else if(p.prev == null){
+		}else if(p.prev == null){ // first node
 			p.next.prev = null;
 			start = p.next;
-		}else{
+		}else{  // other node
 			p.prev.next = p.next;
 			p.next.prev = p.prev;
 		}

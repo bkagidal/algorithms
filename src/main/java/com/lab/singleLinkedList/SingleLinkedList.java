@@ -455,7 +455,7 @@ public class SingleLinkedList {
 		start1 = mergeSort(start1);
 		System.out.println("Recursion Start2 :"+start2.info);
 		start2 = mergeSort(start2);
-		System.out.println("merge2 Start1 :"+ start1.info+" Start2 "  +start2.info);
+		System.out.println("merge2 St                              art1 :"+ start1.info+" Start2 "  +start2.info);
 		startM = merge2(start1, start2);
 
 		return startM;
