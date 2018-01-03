@@ -20,7 +20,7 @@ public class BubbleSort {
 				}
 				
 			}
-			if(swaps == 0)
+			if(swaps == 0) //already sorted
 				break;
 		}
 	}

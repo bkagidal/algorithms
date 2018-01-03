@@ -49,7 +49,9 @@ public class Demo {
 				System.out.println("Wrong Choice");
 			}
 		}
-		
+		scan.close();
 	}
+	
+	
 	
 }

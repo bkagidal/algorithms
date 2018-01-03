@@ -160,106 +160,99 @@ public class BinarySearchTree {
 
 		display(p.lchild, level + 1);
 	}
-	
-	
-	public void delete(int x){
-		
-		Node par=null,p;
-		
+
+	public void delete(int x) {
+
+		Node par = null, p;
+
 		p = root;
-		
-		while(p != null){
-			
-			if(p.info == x)
+
+		while (p != null) {
+
+			if (p.info == x)
 				break;
 			par = p;
-			
-			if( x < p.info)
+
+			if (x < p.info)
 				p = p.lchild;
 			else
 				p = p.rchild;
 		}
-		
-		
-		if(p == null){
+
+		if (p == null) {
 			System.out.println("Element Not Found");
 			return;
 		}
-			
-		if(p.lchild != null && p.rchild != null){
-			
-			Node ps,s;
+
+		if (p.lchild != null && p.rchild != null) {
+
+			Node ps, s;
 			ps = p;
 			s = p.rchild;
-			
-			while(s.lchild != null){
-				ps =s;
+
+			while (s.lchild != null) {
+				ps = s;
 				s = s.lchild;
 			}
-			
+
 			p.info = s.info;
-			
-			par =ps;
+
+			par = ps;
 			p = s;
 		}
-			
-		
+
 		Node ch;
-		
-		if(p.lchild != null)
-			ch =p.lchild;
+
+		if (p.lchild != null)
+			ch = p.lchild;
 		else
 			ch = p.rchild;
-		
-		if(par == null)
-			root=ch;
-		else if(par.lchild == p)
-			par.lchild =ch;
+
+		if (par == null)
+			root = ch;
+		else if (par.lchild == p)
+			par.lchild = ch;
 		else
-			par.rchild =ch;
-		
+			par.rchild = ch;
+
 	}
-	
-	
-	public Node delete1(Node p,int x){
-		
+
+	public Node delete1(Node p, int x) {
+
 		Node ch;
-		if( p == null){
-			
+		if (p == null) {
+
 			System.out.println("Tree is Empty");
 			return null;
 		}
-			
-		
-		if(x < p.lchild.info)
-			p.lchild = delete1(p.lchild,x);
-		else if(x > p.rchild.info)
-			p.rchild = delete1(p.rchild,x);
-		else{
-			
-			if(p.lchild != null && p.rchild != null){
-				
+
+		if (x < p.lchild.info)
+			p.lchild = delete1(p.lchild, x);
+		else if (x > p.rchild.info)
+			p.rchild = delete1(p.rchild, x);
+		else {
+
+			if (p.lchild != null && p.rchild != null) {
+
 				Node s;
-				s=p.rchild;
-				while(s.lchild != null)
+				s = p.rchild;
+				while (s.lchild != null)
 					s = s.lchild;
-				
+
 				p.info = s.info;
-				p.rchild = delete1(p.rchild,s.info);
-				
-			}else{
-				if(p.lchild != null)
+				p.rchild = delete1(p.rchild, s.info);
+
+			} else {
+				if (p.lchild != null)
 					ch = p.lchild;
 				else
 					ch = p.rchild;
-				
+
 				p = ch;
 			}
-				
-			
+
 		}
 		return null;
 	}
-	
-	
+
 }

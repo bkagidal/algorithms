@@ -9,11 +9,11 @@ public class InsertionSort {
 		
 		int temp,j;
 		
-		for(int i=1;i<n;i++){
+		for(int i=1;i<n;i++){ // UnSorted Array portion
 			
 			temp=a[i];
-			for( j=i-1;j>=0 && a[j]>temp;j--)
-					a[j+1] =a[j];
+			for( j=i-1;j>=0 && a[j]>temp;j--) // Compare first element of unsorted array(temp) with
+					a[j+1] =a[j];              //sorted array and make room for temp in sorted array
 			
 			a[j+1] =temp;
 		}
