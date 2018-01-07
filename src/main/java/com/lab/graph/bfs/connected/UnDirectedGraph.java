@@ -2,7 +2,6 @@ package com.lab.graph.bfs.connected;
 
 import java.util.LinkedList;
 import java.util.Queue;
-import java.util.Scanner;
 
 public class UnDirectedGraph {
 
@@ -44,7 +43,7 @@ public class UnDirectedGraph {
 			System.out.println("Graph is Connected");
 			return true;
 		}else{
-			System.out.println("Graph is Disconnected");
+			System.out.println("Graph is Disconnected it has "  +cn + " components");
 			for(int v=0;v<n;v++){
 				System.out.println("Vertex "+vertexList[v]+" Connected "+vertexList[v].connected);
 			}
