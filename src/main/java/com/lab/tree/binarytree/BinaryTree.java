@@ -130,10 +130,11 @@ public void postorder(){
 		if( p == null)
 			
 			return 0;
-		
+		//System.out.println("calling :"+p.info);
 		int hL = height(p.lchild);
+		//System.out.println(hL + " "+p.info);
 		int rL = height(p.rchild);
-		
+		//System.out.println(rL + " "+p.info);
 		if(hL > rL)
 			return 1 + hL;
 		else

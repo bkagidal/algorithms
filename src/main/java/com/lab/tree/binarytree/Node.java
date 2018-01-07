@@ -1,6 +1,5 @@
 package com.lab.tree.binarytree;
 
-@SuppressWarnings("unused")
 public class Node {
 
 	public Node lchild;
