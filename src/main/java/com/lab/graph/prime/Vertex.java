@@ -1,0 +1,18 @@
+package com.lab.graph.prime;
+
+public class Vertex {
+	
+	String name;
+	int state;
+	int pathLenght;
+	int predecessor;
+	
+	public Vertex(String name) {
+		this.name = name;
+	}
+	
+	public String toString(){
+		return name;
+	}
+
+}
